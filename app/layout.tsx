@@ -1,4 +1,5 @@
-import './globals.css'
+import { Sidebar } from '@/components/sidebar'
+import './styles/globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
@@ -16,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} flex`}>
+        <Sidebar />
+        <div className="flex-1 px-4 mx-auto py-14 max-w-7xl">{children}</div>
+      </body>
     </html>
   )
 }
