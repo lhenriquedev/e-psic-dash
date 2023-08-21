@@ -8,16 +8,16 @@ export function Sidebar() {
   const pathname = usePathname()
 
   return (
-    <aside className="flex flex-col items-center h-screen px-12 border-r py-14 border-slate-200 w-72">
+    <aside className="flex flex-col items-center w-64 h-screen px-6 border-r row-span-full py-14 border-slate-200">
       <h2 className="mb-16 text-3xl font-semibold">
         <span className="text-sky-500">e</span>
         Psic
       </h2>
 
-      <nav>
-        <ul className="flex flex-col gap-8">
+      <nav className="w-full">
+        <ul className="flex flex-col items-center gap-8">
           <li
-            className={`flex gap-2 py-2 px-4 rounded-md ${
+            className={`w-full flex gap-2 py-2 px-4 rounded-md ${
               pathname === '/' ? 'bg-stone-50' : ''
             }`}
           >
@@ -33,8 +33,9 @@ export function Sidebar() {
               Dashboard
             </Link>
           </li>
+
           <li
-            className={`flex gap-2 py-2 px-4 rounded-md ${
+            className={`w-full flex gap-2 py-2 px-4 rounded-md ${
               pathname === '/patients' ? 'bg-stone-50' : ''
             }`}
           >
@@ -50,8 +51,9 @@ export function Sidebar() {
               Pacientes
             </Link>
           </li>
+
           <li
-            className={`flex gap-2 py-2 px-4 rounded-md ${
+            className={`w-full flex gap-2 py-2 px-4 rounded-md ${
               pathname === '/schedules' ? 'bg-stone-50' : ''
             }`}
           >
@@ -69,7 +71,7 @@ export function Sidebar() {
           </li>
 
           <li
-            className={`flex gap-2 py-2 px-4 rounded-md ${
+            className={`w-full flex gap-2 py-2 px-4 rounded-md ${
               pathname === '/transactions' ? 'bg-stone-50' : ''
             }`}
           >
