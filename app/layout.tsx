@@ -23,7 +23,9 @@ export default function RootLayout({
       >
         <Header />
         <Sidebar />
-        <div className="flex-1 px-12 py-8 overflow-y-scroll">{children}</div>
+        <main className="flex-grow px-12 py-8 overflow-y-scroll">
+          {children}
+        </main>
       </body>
     </html>
   )

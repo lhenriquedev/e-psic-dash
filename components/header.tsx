@@ -11,7 +11,7 @@ import { Separator } from '@/components/ui/separator'
 
 export default function Header() {
   return (
-    <header className="px-12 py-6 border-b border-slate-200">
+    <header className="px-12 py-3 border-b border-slate-200">
       <div className="flex items-center justify-between">
         <div>
           <h2>Olá, Henrique 👋</h2>

@@ -14,28 +14,12 @@ import { Button } from '@/components/ui/button'
 
 export type Patient = {
   id: string
-  status: 'ativo' | 'inativo'
-  location: string
   name: string
+  address: string
+  age: number
   document: string
+  phone: string
 }
-
-export const data: Patient[] = [
-  {
-    id: 'm5gr84i9',
-    name: 'Luiz Henrique',
-    document: '02452311020',
-    location: 'Rua Coronel Massot',
-    status: 'ativo',
-  },
-  {
-    id: 'm5gr84i39',
-    name: 'Camila Nascente',
-    document: '02152311020',
-    location: 'Rua Coronel Massot',
-    status: 'inativo',
-  },
-]
 
 export const columns: ColumnDef<Patient>[] = [
   {
@@ -51,17 +35,17 @@ export const columns: ColumnDef<Patient>[] = [
     ),
   },
   {
-    accessorKey: 'location',
-    header: 'Localização',
+    accessorKey: 'address',
+    header: 'Endereço',
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue('location')}</div>
+      <div className="capitalize">{row.getValue('address')}</div>
     ),
   },
   {
-    accessorKey: 'status',
-    header: 'Status',
+    accessorKey: 'phone',
+    header: 'Telefone',
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue('status')}</div>
+      <div className="capitalize">{row.getValue('phone')}</div>
     ),
   },
   {

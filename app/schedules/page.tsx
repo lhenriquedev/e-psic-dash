@@ -1,3 +1,11 @@
+import { columns, data } from '../patients/columns'
+import DataTable from '../patients/data-table'
+
 export default function Schedules() {
-  return <div>Schedules</div>
+  return (
+    <>
+      <h2>Próximos horários</h2>
+      <DataTable data={data} columns={columns} />
+    </>
+  )
 }
